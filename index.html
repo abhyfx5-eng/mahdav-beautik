@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <script>
+      (function() {
+        try {
+          var storedFetch = window.fetch;
+          var proto = window;
+          while (proto) {
+            var desc = Object.getOwnPropertyDescriptor(proto, 'fetch');
+            if (desc) {
+              try {
+                Object.defineProperty(proto, 'fetch', {
+                  get: function() { return storedFetch; },
+                  set: function(fn) { storedFetch = fn; },
+                  configurable: true,
+                  enumerable: true
+                });
+              } catch (e) {}
+            }
+            proto = Object.getPrototypeOf(proto);
+          }
+
+          try {
+            Object.defineProperty(window, 'fetch', {
+              get: function() { return storedFetch; },
+              set: function(fn) { storedFetch = fn; },
+              configurable: true,
+              enumerable: true
+            });
+          } catch (e) {}
+        } catch (err) {}
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Madhav Boutique & Fabric | Premium Ethnic Wear & Custom Stitching Roorkee</title>
+    <meta name="description" content="Premium women's ethnic fashion boutique, luxury unstitched suits, handpicked fabrics, and custom stitching in Prem Nagar, Roorkee." />
+    <meta property="og:title" content="Madhav Boutique & Fabric | Traditional Elegance, Styled Your Way" />
+    <meta property="og:description" content="Discover unstitched suits, luxury silk & cotton fabrics, and master custom stitching at Prem Nagar, Gali No. 5, Roorkee." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="/assets/images/hero_ethnic_elegance_1790566486370.jpg" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ClothingStore",
+        "name": "Madhav Boutique & Fabric",
+        "description": "Women's Boutique, Premium Fabric Store, Unstitched Suits & Custom Stitching",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Prem Nagar, Gali No. 5",
+          "addressLocality": "Roorkee",
+          "addressRegion": "Uttarakhand",
+          "addressCountry": "IN"
+        },
+        "telephone": "+918074462177",
+        "priceRange": "₹₹",
+        "openingHours": "Tu-Su 10:30-20:30"
+      }
+    </script>
+  </head>
+  <body class="bg-[#F8F1DC] text-[#1E241F] antialiased selection:bg-[#C9A24A]/20 selection:text-[#123D2A]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

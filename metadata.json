@@ -1,0 +1,8 @@
+{
+  "name": "Madhav Boutique & Fabric",
+  "description": "Premium women's ethnic fashion boutique, luxury unstitched suits, handpicked fabrics, and custom stitching in Prem Nagar, Roorkee.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
